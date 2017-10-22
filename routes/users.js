@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var Pusher = require('pusher');
-
 var pusher = new Pusher({
   appId: '417062',
   key: '9a3edab5733cf2411655',
