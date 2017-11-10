@@ -1,11 +1,19 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>TextSync Quick Start</title>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div id="editor"></div>
+    <script type="text/javascript"
+      src="https://cdn.rawgit.com/pusher/deliverfoo/us1/textsync.js"></script>
+    <script type="text/javascript">
+      const textSyncInstance = new TextSync({
+          instanceLocator: "v1:us1:365ef9f5-1b3f-45bb-bc1a-cf34f820ee82",
+      });
+      textSyncInstance.createEditor({
+          docId: "my-first-document",
+          element: "#editor"
+      });
+    </script>
   </body>
 </html>
